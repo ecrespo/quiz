@@ -1,4 +1,4 @@
-#!/usr/bin/env nodejs
+#!/usr/bin/nodejs
 var debug = require('debug')('quiz');
 var app = require('../app');
 
