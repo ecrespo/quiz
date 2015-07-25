@@ -14,7 +14,6 @@ exports.load = function(req, res, next, quizId) {
 };
 
 
-
 // GET /quizes
 exports.index = function(req, res) {
   models.Quiz.findAll().then(function(quizes) {
