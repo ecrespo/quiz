@@ -1,6 +1,14 @@
+
+
 <table>
   <% var i; for (i=0; i < quizes.length; i++) { %>        
      <tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr> 
   <% } %>
 </table>
 
+
+
+<form method="GET"  action="/quizes"> 
+	<input type="text" name="search " id="search" placeholder="buscar">
+	<input type="submit" value="Buscar">
+</form>
