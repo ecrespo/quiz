@@ -29,6 +29,7 @@ exports.index = function(req, res) {
         }
       }
     }).then(function(quizes) {
+      console.log(quizes);
       res.render('quizes/index.ejs', { quizes: quizes});
     }).catch(function(error) { next(error);})
   }
