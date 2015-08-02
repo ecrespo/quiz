@@ -18,7 +18,7 @@ exports.load = function(req, res, next, quizId) {
 // GET /quizes
 exports.index = function(req, res) {
   console.log("Paso por acá");
-  if (!req.params.search) {
+  if (!req.query.search) {
     models.Quiz.findAll().then(function(quizes) {
       res.render('quizes/index.ejs', { quizes: quizes});
     }).catch(function(error) { next(error);})
@@ -27,7 +27,7 @@ exports.index = function(req, res) {
     models.Quiz.findAll({
       where: {
         pregunta: {
-          $like: "%"+req.params.search + "%"
+          $like: "%"+req.query.search + "%"
         }
       }
     }).then(function(quizes) {
